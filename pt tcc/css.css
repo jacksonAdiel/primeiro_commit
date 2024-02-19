@@ -1,0 +1,101 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f7f7f7; /* Cor de fundo branco */
+}
+
+.navbar {
+  background-color: white;
+  height: 60px;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999; /* Certifica-se de que a barra de navegação esteja na parte superior */
+  text-align: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #ddd;
+}
+
+.footer {
+  background-color: white;
+  height: 30px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.background-animation {
+  position: fixed;
+  top: 50px; /* Ajuste para a barra de navegação */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 80px); /* Ajuste para a barra de navegação e rodapé */
+  background: linear-gradient(to bottom, #3b3b3b, #000); /* Fundo degradê preto */
+  overflow: hidden;
+}
+
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 52px solid #6abf69; /* Triângulos verde */
+  animation: moveTriangle 10s linear infinite;
+  opacity: 0.8; /* Opacidade para adicionar um efeito de sobreposição */
+}
+
+@keyframes moveTriangle {
+  from {
+      top: 0;
+      transform: translateX(-50%) translateY(-50px) rotate(0deg);
+  }
+  to {
+      top: calc(100% - 52px);
+      transform: translateX(-50%) translateY(calc(100% - 52px)) rotate(360deg);
+  }
+}
+
+.t {
+  position: absolute; 
+  margin-right: 100px;
+  padding: 30px;
+  top: 120px; 
+  left: 25%; 
+  transform: translateX(-50%); 
+  width: 600px; 
+  height: 200px; 
+  background-color: white; 
+  text-align: center;
+  font-size: 30px;
+  
+}
+
+
